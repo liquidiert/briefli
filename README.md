@@ -45,11 +45,11 @@ redis-cli set <shortcut> <new_shortcut_value>
 redis-cli del <shortcut>
 ```
 
-To start briefli just type `briefly` into your console and see your shortcuts come to life :D  
+To start briefli just type `briefli` into your console and see your shortcuts come to life :D  
 brieflis' default behaviour is to trigger text replace **after** you pressed CTRL key.
 
 ## Options
 There a several options that allow you to tweak the behaviour of briefli.  
 
 For example you could add a systemd service and let it execute `briefli -d` and briefli will run for ever as a background service :D  
-For all ooptions see `briefly -h`
+For all ooptions see `briefli -h`
