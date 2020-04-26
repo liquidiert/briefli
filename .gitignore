@@ -2,3 +2,4 @@
 *.o
 briefli
 networking.*
+.vscode/*
