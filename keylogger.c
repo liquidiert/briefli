@@ -50,7 +50,7 @@ int is_valid_key(int key) {
 }
 
 
-void keylogger(int keyboard, int immediate){
+void keylogger(int keyboard, int immediate, int redis_port){
     int eventSize = sizeof(struct input_event);
     int bytesRead = 0;
     struct input_event events[NUM_EVENTS];
@@ -59,7 +59,7 @@ void keylogger(int keyboard, int immediate){
     // allocate buffer for shortcuts of maximum size 5
     input_buffer = malloc(sizeof(unsigned char) * 5);
     // redis setup
-    redisContext *context = redisConnect("127.0.0.1", 6379);
+    redisContext *context = redisConnect("127.0.0.1", redis_port);
     redisReply *reply;
     if (context == NULL || context->err) {
         if (context) {
