@@ -1,6 +1,7 @@
 *.out
 *.o
 briefli
+debug
 networking.*
 .vscode/
 .vscode/*
