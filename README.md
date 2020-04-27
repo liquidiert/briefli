@@ -20,7 +20,15 @@ build from source:
 ```bash
 # prerequesites
 sudo apt update
-sudo apt install libxdo-dev libhiredis-dev
+sudo apt install libxdo-dev
+git clone https://github.com/liquidiert/briefli.git
+# install redis library
+git clone https://github.com/redis/hiredis.git
+cd hiredis
+sudo ln -s /usr/local/include/hiredis/hiredis.h /usr/lib/gcc/x86_64-linux-gnu/9/include/ (or wherever your gcc dir is)
+make
+sudo make install
+cd ../briefli
 make
 sudo make install
 ```
