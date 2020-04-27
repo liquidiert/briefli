@@ -15,9 +15,12 @@ After installation set redis up (for configuration options see [redis conf](http
 sudo nano /etc/redis/redis.conf
 redis-server /etc/redis/redis.conf
 ```
-
-Now, if not done already, clone the repo and execute:
+Now you can download the latest release and copy the executable to a directory that is in your PATH or you can
+build from source:
 ```bash
+# prerequesites
+sudo apt update
+sudo apt install libxdo-dev libhiredis-dev
 make
 sudo make install
 ```
