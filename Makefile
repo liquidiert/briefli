@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS=-Wall
 CXXFLAGS=-g -Wall
-BRIEFLI_TARGETS=main.o keylogger.o networking.o find_event_file.o keys.o
-DEBUG_TARGETS=main.c keylogger.c networking.c find_event_file.c keys.c
+BRIEFLI_TARGETS=main.o keylogger.o find_event_file.o keys.o
+DEBUG_TARGETS=main.c keylogger.c find_event_file.c keys.c
 
 all: briefli
 
